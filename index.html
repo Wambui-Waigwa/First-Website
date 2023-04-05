@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>website</title>
+        <style>
+            #nav{
+                background-color: blue;
+                height:70px;
+                width:100%;
+                display: flex;
+                justify-content: center;
+            }
+            ul{
+                list-style: none;
+                display:flex;
+            }
+            ul li{
+                margin: 5px;
+                background-color: rgb(89, 89, 233);
+                color:white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer
+            }
+            button{
+                height:32px;
+                margin: 5px
+            }
+            ul li:hover{
+                background-color: black;
+                color: brown;
+            }
+            .imgslide{
+                background-color: red;
+                height:400px;
+                width:100%;
+                overflow: hidden;
+            }
+            #imageholder{
+                width:300%;
+                height:400px;
+                display: flex;
+               transition-duration: 0.6s;
+            }
+            .img{
+                height: 400px;
+                width: 100%;
+            }
+            .img1{
+                background-image: url(./ferrari.webp);
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+            }
+            .img2{
+                background-image: url(./mustang.jpg);
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+            }
+            .img3{
+                background-image: url(./porsche2.jpg);
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position: center;
+            }
+            .container{
+                background-color: red;
+                height: 400px;
+                width: 100%;
+                display: flex;
+            }
+            .cubeholder{
+                background-color: blue;
+                height: 400px;
+                width:80%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .advert{
+                background-color: rgb(237, 228, 237);
+                height: 400px;
+                width: 20%;
+            }
+            .cube{
+                height: 180px;
+                width: 40%;
+                background-color: rgb(255, 0, 0);
+                margin: 5px;
+                border-radius: 30px;
+                border: solid 1px black;
+                box-shadow:inset 0px 5px 4px black;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <ul>
+                <button>Jenniffer</button>
+                <a href="../assignment1/index.html"><li>Home</li></a>
+                <a href="../assignment1/tables.html"><li>About</li></a>
+                <a href="../assignment1/links.html"><li>services</li></a>
+                <a href="../assignment1/forms.html"><li>contact us</li></a>
+            </ul>
+        </div>
+        <div class="imgslide">
+            <div id="imageholder">
+                <div class="img img1"></div>
+                <div class="img img2"></div>
+                <div class="img img3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cubeholder">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+            </div>
+            <div class="advert">Advertisements</div>
+        </div>
+        <script>
+            const imgholder = document.getElementById("imageholder");
+            var counter = 0;
+            setInterval(function(){               
+                 counter+=100;
+                 if(counter == 300){
+                    counter = 0;
+                }
+                imgholder.style.marginLeft = "-"+counter+"%"
+                
+                
+            }, 3000)
+        </script>
+    </body>
+</html>
